@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Web App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f0f4f8;
+      padding: 50px;
+    }
+    .app {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      max-width: 350px;
+      margin: auto;
+      box-shadow: 0 4px 12px #ccc;
+    }
+    input, button {
+      padding: 10px;
+      margin: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #2563eb;
+      color: white;
+      cursor: pointer;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <h2>My First Web App</h2>
+    <p>Enter your name:</p>
+    <input id="name" placeholder="Your name">
+    <button onclick="greet()">Submit</button>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    function greet() {
+      const name = document.getElementById("name").value;
+      document.getElementById("result").textContent =
+        name ? "Hello, " + name + "!" : "Please enter your name.";
+    }
+  </script>
+</body>
+</html>
